@@ -1,76 +1,4 @@
 
-// function validateForm() {
-//   var name = document.getElementById("name").value;
-//   var mobilenumber = document.getElementById("mobilenumber").value;
-//   var email = document.getElementById("email").value;
-//   var subject = document.getElementById("subject").value;
-//   var message = document.getElementById("message").value;
-//   var msg1 = document.getElementById("msg1")
-
-//   if (name =="") {
-    
-//     ("please type your name");
-//      setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }else if (/\d/.test(name)) {
-    
-//     alert('test must be characters');
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-
-//   if (mobilenumber == "") {
-   
-//     alert('please fill mobile number');
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-  
-//   if (mobilenumber.length < 10 || mobilenumber.length > 10) {
-    
-//     alert('number must have 10 digits ');
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-
-//   var emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-//   if (!emailRegex.test(email)) {
-    
-//     alert("email must be a valid email address");
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-
-//   if (subject == "") {
-    
-//    alert( "Subject must be filled out")
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-
-
-//   if (message == "") {
-//      alert("Message must be filled out")
-//     setTimeout(function () {
-//       msg1.innerHTML = ""
-//     }, 5000)
-//     return false;
-//   }
-
-//   return true;
-// }
 var nameError=document.getElementById('name-error')
 var mobileError=document.getElementById('mobile-error')
 var emailError=document.getElementById('email-error')
@@ -83,7 +11,7 @@ function validateName(){
       nameError.innerHTML="Name is required";
       return false;
      } 
-     if(!name.match((/^[A-Za-z]*$/))){
+     if(!name.match((/^[A-Za-z]*\s{1}[A-Za-z]*$/))){
       nameError.innerHTML="Write Full name";
       return false;
      }
